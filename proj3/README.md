@@ -187,8 +187,7 @@ Hodnocení
 
 Na výsledném hodnocení mají hlavní vliv následující faktory:
 
-    přesné dodržení implementačních detailů,
-    implementace jednotlivých funkcí,
-    správná práce s pamětí,
-    správný algoritmus shlukování,
-    správné řešení neočekávaných stavů.
+implementace jednotlivých funkcí,
+správná práce s pamětí,
+správný algoritmus shlukování,
+správné řešení neočekávaných stavů.
