@@ -7,6 +7,7 @@ Smyslem projektu není studium shlukových analýz. Pro projekt bude stačit ná
 Shlukovou analýzu provádějte na dvourozměrných objektech. Každý objekt je identifikován celým číslem. Objekty jsou uloženy v textovém souboru.
 
 Při implementaci můžete pro vizualizaci a porozumění objektů používat tuto jednoduchou aplikaci, která vykresluje a obarvuje vámi vygenerované shluky.
+
 Metoda nejbližšího souseda
 
 Metoda nejbližšího souseda vybírá ke spojení vždy dva shluky, které mají k sobě nejblíže. Vzdálenost dvou shluků je rovna nejmenší vzdálenosti libovolných dvou objektů z obou shluků.
@@ -32,7 +33,7 @@ Argumenty programu:
 
     SOUBOR je jméno souboru se vstupními daty.
     N je volitelný argument definující cílový počet shluků. N > 0. Výchozí hodnota (při absenci argumentu) je 1.
-
+    
 Implementační detaily
 Formát vstupního souboru
 
@@ -40,15 +41,19 @@ Vstupní data jsou uložena v textovém souboru. První řádek souboru je vyhra
 
 count=N
 
-kde číslo je počet objektů v souboru. Následuje na každém řádku definice jednoho objektu. Počet řádků souboru odpovídá minimálně počtu objektů + 1 (první řádek). Další řádky souboru ignorujte. Řádek definující objekt je formátu:
+kde číslo je počet objektů v souboru. Následuje na každém řádku definice jednoho objektu. Počet řádků souboru odpovídá minimálně počtu
+objektů + 1 (první řádek). Další řádky souboru ignorujte. Řádek definující objekt je formátu:
 
 OBJID X Y
 
-kde OBJID je v rámci souboru jednoznačný celočíselný identifikátor, X a Y jsou souřadnice objektu také celá čísla. Platí 0 <= X <= 1000, 0 <= Y <= 1000.
+kde OBJID je v rámci souboru jednoznačný celočíselný identifikátor, X a Y jsou souřadnice objektu také celá čísla. Platí 0 <= X <= 1000,
+0 <= Y <= 1000.
 
 1. podúkol
 
-Stáhněte si kostru programu proj3.c. Seznamte se s datovými typy a funkcemi. Vaším úkolem je pouze doplnit kód na místech označených komentářem TODO.
+Stáhněte si kostru programu proj3.c. Seznamte se s datovými typy a funkcemi. Vaším úkolem je pouze doplnit kód na místech označených
+omentářem TODO.
+
 2. podúkol
 
 Načítání vstupního souboru a následný výpis:
