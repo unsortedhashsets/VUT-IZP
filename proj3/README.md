@@ -60,10 +60,10 @@ Načítání vstupního souboru a následný výpis:
 
 1. Implementujte funkce:
 
-void init_cluster(struct cluster_t *c, int cap);
-void clear_cluster(struct cluster_t *c);
-void append_cluster(struct cluster_t *c, struct obj_t obj);
-int load_clusters(char *filename, struct cluster_t **arr);
+    void init_cluster(struct cluster_t *c, int cap);
+    void clear_cluster(struct cluster_t *c);
+    void append_cluster(struct cluster_t *c, struct obj_t obj);
+       int load_clusters(char *filename, struct cluster_t **arr);
 
 Funkce init_cluster slouží pro inicializaci shluku (alokaci požadovaného místa).
 
@@ -77,116 +77,116 @@ Funkce load_clusters načítá ze vstupního souboru všechny objekty a ukládá
 
 Vstupní soubor objekty
 
-count=20
-40 86 663
-43 747 938
-47 285 973
-49 548 422
-52 741 541
-56 44 854
-57 795 59
-61 267 375
-62 85 874
-66 125 211
-68 80 770
-72 277 272
-74 222 444
-75 28 603
-79 926 463
-83 603 68
-86 238 650
-87 149 304
-89 749 190
-93 944 835
+    count=20
+    40 86 663
+    43 747 938
+    47 285 973
+    49 548 422
+    52 741 541
+    56 44 854
+    57 795 59
+    61 267 375
+    62 85 874
+    66 125 211
+    68 80 770
+    72 277 272
+    74 222 444
+    75 28 603
+    79 926 463
+    83 603 68
+    86 238 650
+    87 149 304
+    89 749 190
+    93 944 835
 
 Načtení vstupního souboru a následné vypsání shluků:
 
-$ ./proj3 objekty 20
-Clusters:
-cluster 0: 40[86,663]
-cluster 1: 43[747,938]
-cluster 2: 47[285,973]
-cluster 3: 49[548,422]
-cluster 4: 52[741,541]
-cluster 5: 56[44,854]
-cluster 6: 57[795,59]
-cluster 7: 61[267,375]
-cluster 8: 62[85,874]
-cluster 9: 66[125,211]
-cluster 10: 68[80,770]
-cluster 11: 72[277,272]
-cluster 12: 74[222,444]
-cluster 13: 75[28,603]
-cluster 14: 79[926,463]
-cluster 15: 83[603,68]
-cluster 16: 86[238,650]
-cluster 17: 87[149,304]
-cluster 18: 89[749,190]
-cluster 19: 93[944,835]
+    $ ./proj3 objekty 20
+    Clusters:
+    cluster 0: 40[86,663]
+    cluster 1: 43[747,938]
+    cluster 2: 47[285,973]
+    cluster 3: 49[548,422]
+    cluster 4: 52[741,541]
+    cluster 5: 56[44,854]
+    cluster 6: 57[795,59]
+    cluster 7: 61[267,375]
+    cluster 8: 62[85,874]
+    cluster 9: 66[125,211]
+    cluster 10: 68[80,770]
+    cluster 11: 72[277,272]
+    cluster 12: 74[222,444]
+    cluster 13: 75[28,603]
+    cluster 14: 79[926,463]
+    cluster 15: 83[603,68]
+    cluster 16: 86[238,650]
+    cluster 17: 87[149,304]
+    cluster 18: 89[749,190]
+    cluster 19: 93[944,835]
 
 3. podúkol
 
 Implementujte všechny ostatní funkce v kostře souboru proj3.c označené komentářem TODO. Výsledný program odevzdejte.
 Příklady vstupů a výstupů
 
-$ cat objekty
-count=20
-40 86 663
-43 747 938
-47 285 973
-49 548 422
-52 741 541
-56 44 854
-57 795 59
-61 267 375
-62 85 874
-66 125 211
-68 80 770
-72 277 272
-74 222 444
-75 28 603
-79 926 463
-83 603 68
-86 238 650
-87 149 304
-89 749 190
-93 944 835
+    $ cat objekty
+    count=20
+    40 86 663
+    43 747 938
+    47 285 973
+    49 548 422
+    52 741 541
+    56 44 854
+    57 795 59
+    61 267 375
+    62 85 874
+    66 125 211
+    68 80 770
+    72 277 272
+    74 222 444
+    75 28 603
+    79 926 463
+    83 603 68
+    86 238 650
+    87 149 304
+    89 749 190
+    93 944 835
 
-$ ./proj3 objekty 8
-Clusters:
-cluster 0: 40[86,663] 56[44,854] 62[85,874] 68[80,770] 75[28,603] 86[238,650]
-cluster 1: 43[747,938]
-cluster 2: 47[285,973]
-cluster 3: 49[548,422]
-cluster 4: 52[741,541] 79[926,463]
-cluster 5: 57[795,59] 83[603,68] 89[749,190]
-cluster 6: 61[267,375] 66[125,211] 72[277,272] 74[222,444] 87[149,304]
-cluster 7: 93[944,835]
+    $ ./proj3 objekty 8
+    Clusters:
+    cluster 0: 40[86,663] 56[44,854] 62[85,874] 68[80,770] 75[28,603] 86[238,650]
+    cluster 1: 43[747,938]
+    cluster 2: 47[285,973]
+    cluster 3: 49[548,422]
+    cluster 4: 52[741,541] 79[926,463]
+    cluster 5: 57[795,59] 83[603,68] 89[749,190]
+    cluster 6: 61[267,375] 66[125,211] 72[277,272] 74[222,444] 87[149,304]
+    cluster 7: 93[944,835]
 
-$ valgrind ./proj3 objekty 8
-==23223== Memcheck, a memory error detector
-==23223== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==23223== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
-==23223== Command: ./proj3 objekty 8
-==23223== 
-Clusters:
-cluster 0: 40[86,663] 56[44,854] 62[85,874] 68[80,770] 75[28,603] 86[238,650]
-cluster 1: 43[747,938]
-cluster 2: 47[285,973]
-cluster 3: 49[548,422]
-cluster 4: 52[741,541] 79[926,463]
-cluster 5: 57[795,59] 83[603,68] 89[749,190]
-cluster 6: 61[267,375] 66[125,211] 72[277,272] 74[222,444] 87[149,304]
-cluster 7: 93[944,835]
-==23223== 
-==23223== HEAP SUMMARY:
-==23223==     in use at exit: 0 bytes in 0 blocks
-==23223==   total heap usage: 36 allocs, 36 frees, 9,748 bytes allocated
-==23223== 
-==23223== All heap blocks were freed -- no leaks are possible
-==23223== 
-==23223== For counts of detected and suppressed errors, rerun with: -v
-==23223== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+    $ valgrind ./proj3 objekty 8
+    ==23223== Memcheck, a memory error detector
+    ==23223== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+    ==23223== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+    ==23223== Command: ./proj3 objekty 8
+    ==23223== 
+    Clusters:
+    cluster 0: 40[86,663] 56[44,854] 62[85,874] 68[80,770] 75[28,603] 86[238,650]
+    cluster 1: 43[747,938]
+    cluster 2: 47[285,973]
+    cluster 3: 49[548,422]
+    cluster 4: 52[741,541] 79[926,463]
+    cluster 5: 57[795,59] 83[603,68] 89[749,190]
+    cluster 6: 61[267,375] 66[125,211] 72[277,272] 74[222,444] 87[149,304]
+    cluster 7: 93[944,835]
+    ==23223== 
+    ==23223== HEAP SUMMARY:
+    ==23223==     in use at exit: 0 bytes in 0 blocks
+    ==23223==   total heap usage: 36 allocs, 36 frees, 9,748 bytes allocated
+    ==23223== 
+    ==23223== All heap blocks were freed -- no leaks are possible
+    ==23223== 
+    ==23223== For counts of detected and suppressed errors, rerun with: -v
+    ==23223== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 Hodnocení
 
